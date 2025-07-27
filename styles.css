@@ -820,3 +820,21 @@ html {
 ::-webkit-scrollbar-thumb:hover {
     background: #0099cc;
 }
+
+.brand-logo {
+  height: 36px;
+  width: 36px;
+  vertical-align: middle;
+  margin-right: 10px;
+  object-fit: contain;
+  background: transparent;
+  display: inline-block;
+}
+
+.footer-round {
+  border-radius: 50%;
+  background: #0a0a0a;
+  padding: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  border: 2px solid #00d4ff;
+}
