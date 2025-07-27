@@ -99,17 +99,6 @@ document.addEventListener('DOMContentLoaded', () => {
 // Form submission handling
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-        const submitBtn = contactForm.querySelector('button[type="submit"]');
-        const originalText = submitBtn.textContent;
-        submitBtn.textContent = 'Sending...';
-        submitBtn.disabled = true;
-        
-        // Let the form submit to Formspree
-        // Formspree will handle the email forwarding
-    });
-    
-    // Handle form submission success
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
         
@@ -120,7 +109,7 @@ if (contactForm) {
         submitBtn.textContent = 'Sending...';
         submitBtn.disabled = true;
         
-        fetch('https://formspree.io/f/trinium-dev', {
+        fetch('https://formspree.io/f/xyzpwqjq', {
             method: 'POST',
             body: formData,
             headers: {
