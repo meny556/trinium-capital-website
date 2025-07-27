@@ -188,10 +188,10 @@
                     <h3>Ready to Transform Your Trading?</h3>
                     <p>Contact our team to learn more about how Trinium Capital can enhance your trading performance.</p>
                     <div class="contact-details">
-                                            <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <span><a href="mailto:trinium.dev@gmail.com" style="color: #00d4ff; text-decoration: none;">trinium.dev@gmail.com</a></span>
-                    </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span><a href="mailto:trinium.dev@gmail.com" style="color: #00d4ff; text-decoration: none;">trinium.dev@gmail.com</a></span>
+                        </div>
                         <div class="contact-item">
                             <i class="fas fa-phone"></i>
                             <span>+972 54 642 4622</span>
@@ -204,16 +204,20 @@
                 </div>
                 <form class="contact-form" action="https://formspree.io/f/xpzgwqjq" method="POST">
                     <div class="form-group">
-                        <input type="text" name="name" placeholder="Full Name" required>
+                        <label for="name">Your full name:</label>
+                        <input type="text" id="name" name="name" placeholder="Full Name" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" name="email" placeholder="Email Address" required>
+                        <label for="email">Your email:</label>
+                        <input type="email" id="email" name="email" placeholder="Email Address" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" name="company" placeholder="Company (Optional)">
+                        <label for="company">Your company (optional):</label>
+                        <input type="text" id="company" name="company" placeholder="Company (Optional)">
                     </div>
                     <div class="form-group">
-                        <textarea name="message" placeholder="Message" rows="4" required></textarea>
+                        <label for="message">Your message:</label>
+                        <textarea id="message" name="message" placeholder="Message" rows="4" required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Send Message</button>
                 </form>
