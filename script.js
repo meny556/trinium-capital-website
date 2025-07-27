@@ -121,11 +121,12 @@ if (contactForm) {
                 alert('Thank you! Your message has been sent successfully.');
                 this.reset();
             } else {
-                alert('Sorry, there was an error sending your message. Please try again.');
+                return response.json().then(err => { throw err; });
             }
         })
         .catch(error => {
-            alert('Sorry, there was an error sending your message. Please try again.');
+            console.error('Form submission error:', error);
+            alert('Sorry, there was an error sending your message: ' + (error.message || 'Unknown error') + '. Please try again.');
         })
         .finally(() => {
             submitBtn.textContent = originalText;
