@@ -109,7 +109,7 @@ if (contactForm) {
         submitBtn.textContent = 'Sending...';
         submitBtn.disabled = true;
         
-        fetch('https://formspree.io/f/xpzgwqjq', {
+        fetch('https://api.web3forms.com/submit', {
             method: 'POST',
             body: formData,
             headers: {
@@ -311,4 +311,4 @@ style.textContent = `
 document.head.appendChild(style);
 
 // Initialize particles
-document.addEventListener('DOMContentLoaded', createParticles); 
+document.addEventListener('DOMContentLoaded', createParticles);

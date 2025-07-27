@@ -12,7 +12,7 @@ body {
     overflow-x: hidden;
     font-weight: 400;
     letter-spacing: 0.01em;
-    background-color: #0a0a0a;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
 }
 
 /* Navigation */
@@ -84,12 +84,12 @@ body {
 /* Hero Section */
 .hero {
     min-height: 100vh;
-    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
     display: flex;
     align-items: center;
     padding-top: 80px;
     position: relative;
     overflow: hidden;
+    background: transparent;
 }
 
 .hero::before {
@@ -106,7 +106,7 @@ body {
 .hero-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 40px; /* Increased padding for text shift */
+    padding: 0 20px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
@@ -139,7 +139,6 @@ body {
     line-height: 1.7;
     font-weight: 400;
     letter-spacing: 0.01em;
-    padding-left: 20px; /* Added padding for text */
 }
 
 .hero-stats {
@@ -293,7 +292,6 @@ body {
 .section-header {
     text-align: center;
     margin-bottom: 4rem;
-    padding: 0 40px; /* Added padding for centering */
 }
 
 .section-header h2 {
@@ -312,9 +310,8 @@ body {
 
 /* About Section */
 .about {
-    background: #0f0f23;
+    background: transparent;
     padding: 6rem 0;
-    margin-top: -2px; /* Increased overlap to remove void */
 }
 
 .about-content {
@@ -322,7 +319,6 @@ body {
     grid-template-columns: 2fr 1fr;
     gap: 4rem;
     align-items: center;
-    padding: 0 40px; /* Added padding for text */
 }
 
 .about-text h3 {
@@ -340,14 +336,12 @@ body {
     color: #b0b0b0;
     margin-bottom: 1.5rem;
     line-height: 1.7;
-    padding-left: 20px; /* Added padding for text shift */
 }
 
 .about-features {
     display: flex;
     gap: 2rem;
     margin-top: 2rem;
-    padding-left: 20px; /* Added padding */
 }
 
 .feature {
@@ -382,16 +376,14 @@ body {
 
 /* Features Section */
 .features {
-    background: #1a1a2e;
+    background: transparent;
     padding: 6rem 0;
-    margin-top: -2px; /* Increased overlap */
 }
 
 .features-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2rem;
-    padding: 0 40px; /* Added padding */
 }
 
 .feature-card {
@@ -455,21 +447,18 @@ body {
     line-height: 1.7;
     font-size: 1.05rem;
     font-weight: 400;
-    padding: 0 20px; /* Added padding for text */
 }
 
 /* Technology Section */
 .technology {
-    background: #0f0f23;
+    background: transparent;
     padding: 6rem 0;
-    margin-top: -2px; /* Increased overlap */
 }
 
 .tech-content {
     display: flex;
     flex-direction: column;
     gap: 3rem;
-    padding: 0 40px; /* Added padding */
 }
 
 .tech-item {
@@ -504,21 +493,18 @@ body {
 .tech-text p {
     color: #b0b0b0;
     line-height: 1.6;
-    padding-left: 20px; /* Added padding for text */
 }
 
 /* Contact Section */
 .contact {
-    background: #1a1a2e;
+    background: transparent;
     padding: 6rem 0;
-    margin-top: -2px; /* Increased overlap */
 }
 
 .contact-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
-    padding: 0 40px; /* Increased padding to shift right/center */
 }
 
 .contact-info h3 {
@@ -531,7 +517,6 @@ body {
     color: #b0b0b0;
     margin-bottom: 2rem;
     line-height: 1.6;
-    padding-left: 20px; /* Added padding */
 }
 
 .contact-details {
@@ -569,7 +554,6 @@ body {
     font-size: 1.1rem;
     margin-bottom: 0.5rem;
     display: block;
-    padding-left: 20px; /* Added padding for labels */
 }
 
 .form-group input,
@@ -582,7 +566,6 @@ body {
     color: #fff;
     font-size: 1rem;
     transition: all 0.3s ease;
-    margin-left: 20px; /* Shift inputs right */
 }
 
 .form-group input:focus,
@@ -599,9 +582,8 @@ body {
 
 /* Footer */
 .footer {
-    background: #0a0a0a;
+    background: transparent;
     padding: 3rem 0 1rem;
-    margin-top: -2px; /* Increased overlap */
 }
 
 .footer-content {
@@ -609,7 +591,6 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
     margin-bottom: 2rem;
-    padding: 0 40px; /* Added padding */
 }
 
 .footer-logo {
@@ -629,7 +610,6 @@ body {
 .footer-section p {
     color: #b0b0b0;
     line-height: 1.6;
-    padding-left: 20px; /* Added padding */
 }
 
 .footer-section h4 {
@@ -650,7 +630,6 @@ body {
     color: #b0b0b0;
     text-decoration: none;
     transition: color 0.3s ease;
-    padding-left: 20px; /* Added padding */
 }
 
 .footer-section ul li a:hover {
@@ -685,7 +664,6 @@ body {
     padding-top: 2rem;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     color: #888;
-    padding-left: 0; /* No extra for bottom */
 }
 
 /* Responsive Design */
@@ -756,15 +734,6 @@ body {
     .section-header h2 {
         font-size: 2rem;
     }
-    
-    /* Reduce padding on small screens */
-    .hero-container, .about-content, .features-grid, .tech-content, .contact-content, .footer-content {
-        padding: 0 20px;
-    }
-    
-    .about-text p, .feature-card p, .tech-text p, .contact-info p, .form-group label, .form-group input, .form-group textarea, .footer-section p, .footer-section ul li a, .hero-subtitle {
-        padding-left: 10px;
-    }
 }
 
 @media (max-width: 480px) {
@@ -792,15 +761,6 @@ body {
     
     .contact-form {
         padding: 1.5rem;
-    }
-    
-    /* Further reduce on very small screens */
-    .hero-container, .about-content, .features-grid, .tech-content, .contact-content, .footer-content {
-        padding: 0 10px;
-    }
-    
-    .about-text p, .feature-card p, .tech-text p, .contact-info p, .form-group label, .form-group input, .form-group textarea, .footer-section p, .footer-section ul li a, .hero-subtitle {
-        padding-left: 5px;
     }
 }
 
