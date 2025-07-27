@@ -100,14 +100,48 @@ document.addEventListener('DOMContentLoaded', () => {
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
-        // Let the form submit naturally to email
         const submitBtn = contactForm.querySelector('button[type="submit"]');
         const originalText = submitBtn.textContent;
         submitBtn.textContent = 'Sending...';
         submitBtn.disabled = true;
         
-        // The form will open the user's email client
-        // No need to prevent default or show alerts
+        // Let the form submit to Formspree
+        // Formspree will handle the email forwarding
+    });
+    
+    // Handle form submission success
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const formData = new FormData(this);
+        const submitBtn = this.querySelector('button[type="submit"]');
+        const originalText = submitBtn.textContent;
+        
+        submitBtn.textContent = 'Sending...';
+        submitBtn.disabled = true;
+        
+        fetch('https://formspree.io/f/trinium-dev', {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+        .then(response => {
+            if (response.ok) {
+                alert('Thank you! Your message has been sent successfully.');
+                this.reset();
+            } else {
+                alert('Sorry, there was an error sending your message. Please try again.');
+            }
+        })
+        .catch(error => {
+            alert('Sorry, there was an error sending your message. Please try again.');
+        })
+        .finally(() => {
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+        });
     });
 }
 
