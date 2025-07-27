@@ -96,9 +96,35 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// Load Web3Forms access key from .env file
+async function loadAccessKey() {
+    try {
+        const response = await fetch('.env');
+        const envContent = await response.text();
+        const match = envContent.match(/WEB3FORMS_ACCESS_KEY=([^\s]+)/);
+        if (match) {
+            return match[1];
+        }
+    } catch (error) {
+        console.warn('Could not load .env file');
+    }
+    return null;
+}
+
 // Form submission handling
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
+    // Load and set the access key when page loads
+    loadAccessKey().then(accessKey => {
+        if (accessKey) {
+            const accessKeyInput = contactForm.querySelector('input[name="access_key"]');
+            if (accessKeyInput) {
+                accessKeyInput.value = accessKey;
+                console.log('✅ Web3Forms access key loaded');
+            }
+        }
+    });
+
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
         
