@@ -109,7 +109,7 @@ if (contactForm) {
         submitBtn.textContent = 'Sending...';
         submitBtn.disabled = true;
         
-        fetch('https://formspree.io/f/xyzpwqjq', {
+        fetch('https://formspree.io/f/xpzgwqjq', {
             method: 'POST',
             body: formData,
             headers: {
