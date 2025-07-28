@@ -41,6 +41,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 90px;
 }
 
 .nav-logo {
@@ -845,4 +846,8 @@ html {
     vertical-align: middle;
     margin-left: 0;
     margin-right: 0;
+}
+
+.logo-wrapper {
+    margin-top: 20px;
 }
